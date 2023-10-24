@@ -1,0 +1,4 @@
+*.pyc
+*.amlignore
+*.amltmp
+*.ipynb_checkpoints
