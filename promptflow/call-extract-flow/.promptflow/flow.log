@@ -1,0 +1,8 @@
+2023-10-24 18:37:54 +0000   65984 execution          INFO     Start to run 2 nodes with concurrency level 16.
+2023-10-24 18:37:54 +0000   65984 execution.flow     INFO     Executing node callextractprompt. node run id: f0c2e07d-e815-44cc-91a5-2240bd1d091b_callextractprompt_0
+2023-10-24 18:37:54 +0000   65984 execution.flow     INFO     Executing node call_summary. node run id: f0c2e07d-e815-44cc-91a5-2240bd1d091b_call_summary_0
+2023-10-24 18:37:55 +0000   65984 execution.flow     WARNING  Output of call_summary is not json serializable, use str to store it.
+2023-10-24 18:37:55 +0000   65984 execution.flow     INFO     Node call_summary completes.
+2023-10-24 18:37:55 +0000   65984 execution.flow     WARNING  Failed to calculate metrics due to exception: Calculating metrics for model gpt4 is not supported..
+2023-10-24 18:37:55 +0000   65984 execution.flow     WARNING  Output of callextractprompt is not json serializable, use str to store it.
+2023-10-24 18:37:55 +0000   65984 execution.flow     INFO     Node callextractprompt completes.

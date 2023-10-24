@@ -11,6 +11,17 @@
         }
       },
       "source": "LLM_yzja.jinja2"
+    },
+    "call_summary.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "question": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "call_summary.jinja2"
     }
   }
 }

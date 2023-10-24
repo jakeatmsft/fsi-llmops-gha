@@ -1,23 +1,24 @@
 {
   "flow_runs": [
     {
-      "run_id": "b4f77bfc-1d4a-4727-8d0d-99e05f1e693d_0",
+      "run_id": "f0c2e07d-e815-44cc-91a5-2240bd1d091b_0",
       "status": "Completed",
       "error": null,
       "inputs": {
-        "text": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling PNC Bank for quality assurance or security purposes. Thank you for calling the PNC Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching."
+        "text": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling ABC Bank for quality assurance or security purposes. Thank you for calling the ABC Bank Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching."
       },
       "output": {
-        "output_prompt": "{ \"customer_name\": \"<name_34>\", \"complaint\": [ { \"description\": \"Closing account\", \"is_resolved\": 0 } ], \"tier\": 0 }"
+        "output_prompt": "{ \"customer_name\": \"<name_35> XXXXX\", \"complaint\": [ { \"description\": \"Closing account\", \"is_resolved\": 0 } ], \"tier\": 0 }",
+        "output_summary": "The user called a bank to close their account due to frustration. They were transferred to the Fraud Detection and Remediation Team and informed of a 45-minute wait time. They were advised to have their account number ready to expedite service."
       },
       "metrics": null,
       "request": null,
-      "parent_run_id": "b4f77bfc-1d4a-4727-8d0d-99e05f1e693d",
-      "root_run_id": "b4f77bfc-1d4a-4727-8d0d-99e05f1e693d",
+      "parent_run_id": "f0c2e07d-e815-44cc-91a5-2240bd1d091b",
+      "root_run_id": "f0c2e07d-e815-44cc-91a5-2240bd1d091b",
       "source_run_id": null,
       "flow_id": "default_flow_id",
-      "start_time": "2023-10-24T16:41:50.833124Z",
-      "end_time": "2023-10-24T16:41:52.428772Z",
+      "start_time": "2023-10-24T18:37:54.936534Z",
+      "end_time": "2023-10-24T18:37:56.905887Z",
       "index": 0,
       "api_calls": [
         {
@@ -25,18 +26,18 @@
           "type": "Tool",
           "inputs": {
             "prompt": "system:\nYou are an AI assistant that extract information from a call transcript . You will be given transcript of a call between an agent and a customer.  You must extract the following from each transcript\t\n    1. Customer Name (key: customer_name)\n    2. List of Complaints (key:complaint)\n    3. Tier (key:tier)\n\n    Field 1 is the name of the customer\n    Field 2 is an array of complaints each complaint is a separate list entry, ignore complaints about call such as long wait times, transfers, and card verification. each list entry must contain the following:\n    description (key: description)\n    is_resolved (key: is_resolved) , 1 if resolved, 0 if unresolved\n    Field 3 is an indicator field, 1 if all complaints were resolved in the call, 0 if complaints were unresolved.\n\n    Please answer in JSON machine-readable format, using the keys from above.  \n    If you are unsure about a value please use \"n/a\". Format the output as JSON object. Make sure that is properly closed at the end.\n\n\nuser:\nHello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling PNC Bank for quality assurance or security purposes. Thank you for calling the PNC Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.\n\nassistant:\n{ \"customer_name\": \"<name_34>\", \"complaint\": [ { \"description\": \"Closing account\", \"is_resolved\": 0 } ], \"tier\": 0 }\n\nuser:\n{{text}}",
-            "deployment_name": "gpt-35-turbo-v0301",
+            "deployment_name": "gpt4",
             "frequency_penalty": 0.0,
             "max_tokens": 500,
             "presence_penalty": 0.0,
             "temperature": 0.0,
-            "text": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling PNC Bank for quality assurance or security purposes. Thank you for calling the PNC Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.",
+            "text": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling ABC Bank for quality assurance or security purposes. Thank you for calling the ABC Bank Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.",
             "top_p": 1.0,
             "stream": true
           },
           "output": [],
-          "start_time": 1698165710.835066,
-          "end_time": 1698165711.585156,
+          "start_time": 1698172674.939103,
+          "end_time": 1698172675.704073,
           "error": null,
           "children": [
             {
@@ -46,7 +47,7 @@
                 "api_base": "https://eu1-mlworkspace-aoai.openai.azure.com/",
                 "api_type": "azure",
                 "api_version": "2023-07-01-preview",
-                "engine": "gpt-35-turbo-v0301",
+                "engine": "gpt4",
                 "messages": [
                   {
                     "role": "system",
@@ -62,7 +63,7 @@
                   },
                   {
                     "role": "user",
-                    "content": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling PNC Bank for quality assurance or security purposes. Thank you for calling the PNC Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching."
+                    "content": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling ABC Bank for quality assurance or security purposes. Thank you for calling the ABC Bank Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching."
                   }
                 ],
                 "temperature": 0.0,
@@ -77,14 +78,69 @@
                 "user": ""
               },
               "output": [],
-              "start_time": 1698165711.34264,
-              "end_time": 1698165711.585072,
+              "start_time": 1698172675.077009,
+              "end_time": 1698172675.704013,
               "error": null,
               "children": null,
               "node_name": null
             }
           ],
           "node_name": "callextractprompt"
+        },
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "system:\nYou are a helpful assistant that provides a short concise summary from the user text.\n\nuser:\n{{question}}\n",
+            "deployment_name": "gpt-35-turbo-v0301",
+            "max_tokens": 500,
+            "question": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling ABC Bank for quality assurance or security purposes. Thank you for calling the ABC Bank Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.",
+            "temperature": 0.0,
+            "stream": true
+          },
+          "output": [],
+          "start_time": 1698172674.939478,
+          "end_time": 1698172675.309664,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.chat_completion.ChatCompletion.create",
+              "type": "LLM",
+              "inputs": {
+                "api_base": "https://eu1-mlworkspace-aoai.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview",
+                "engine": "gpt-35-turbo-v0301",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a helpful assistant that provides a short concise summary from the user text."
+                  },
+                  {
+                    "role": "user",
+                    "content": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling ABC Bank for quality assurance or security purposes. Thank you for calling the ABC Bank Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.\n"
+                  }
+                ],
+                "temperature": 0.0,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": true,
+                "stop": null,
+                "max_tokens": 500,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "logit_bias": {},
+                "user": ""
+              },
+              "output": [],
+              "start_time": 1698172675.081231,
+              "end_time": 1698172675.309402,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "call_summary"
         }
       ],
       "variant_id": "",
@@ -92,11 +148,12 @@
       "description": "",
       "tags": null,
       "system_metrics": {
-        "duration": 1.595648,
-        "total_tokens": 926
+        "duration": 1.969353,
+        "total_tokens": 346
       },
       "result": {
-        "output_prompt": "{ \"customer_name\": \"<name_34>\", \"complaint\": [ { \"description\": \"Closing account\", \"is_resolved\": 0 } ], \"tier\": 0 }"
+        "output_prompt": "{ \"customer_name\": \"<name_35> XXXXX\", \"complaint\": [ { \"description\": \"Closing account\", \"is_resolved\": 0 } ], \"tier\": 0 }",
+        "output_summary": "The user called a bank to close their account due to frustration. They were transferred to the Fraud Detection and Remediation Team and informed of a 45-minute wait time. They were advised to have their account number ready to expedite service."
       },
       "upload_metrics": false
     }
@@ -104,26 +161,26 @@
   "node_runs": [
     {
       "node": "callextractprompt",
-      "flow_run_id": "b4f77bfc-1d4a-4727-8d0d-99e05f1e693d",
-      "run_id": "b4f77bfc-1d4a-4727-8d0d-99e05f1e693d_callextractprompt_0",
+      "flow_run_id": "f0c2e07d-e815-44cc-91a5-2240bd1d091b",
+      "run_id": "f0c2e07d-e815-44cc-91a5-2240bd1d091b_callextractprompt_0",
       "status": "Completed",
       "inputs": {
         "prompt": "system:\nYou are an AI assistant that extract information from a call transcript . You will be given transcript of a call between an agent and a customer.  You must extract the following from each transcript\t\n    1. Customer Name (key: customer_name)\n    2. List of Complaints (key:complaint)\n    3. Tier (key:tier)\n\n    Field 1 is the name of the customer\n    Field 2 is an array of complaints each complaint is a separate list entry, ignore complaints about call such as long wait times, transfers, and card verification. each list entry must contain the following:\n    description (key: description)\n    is_resolved (key: is_resolved) , 1 if resolved, 0 if unresolved\n    Field 3 is an indicator field, 1 if all complaints were resolved in the call, 0 if complaints were unresolved.\n\n    Please answer in JSON machine-readable format, using the keys from above.  \n    If you are unsure about a value please use \"n/a\". Format the output as JSON object. Make sure that is properly closed at the end.\n\n\nuser:\nHello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling PNC Bank for quality assurance or security purposes. Thank you for calling the PNC Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.\n\nassistant:\n{ \"customer_name\": \"<name_34>\", \"complaint\": [ { \"description\": \"Closing account\", \"is_resolved\": 0 } ], \"tier\": 0 }\n\nuser:\n{{text}}",
-        "deployment_name": "gpt-35-turbo-v0301",
+        "deployment_name": "gpt4",
         "frequency_penalty": 0.0,
         "max_tokens": 500,
         "presence_penalty": 0.0,
         "temperature": 0.0,
-        "text": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling PNC Bank for quality assurance or security purposes. Thank you for calling the PNC Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.",
+        "text": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling ABC Bank for quality assurance or security purposes. Thank you for calling the ABC Bank Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.",
         "top_p": 1.0,
         "stream": true
       },
-      "output": "<generator object generate_from_proxy at 0x7f86b709a190>",
+      "output": "<generator object generate_from_proxy at 0x7f87f4f67820>",
       "metrics": null,
       "error": null,
-      "parent_run_id": "b4f77bfc-1d4a-4727-8d0d-99e05f1e693d_0",
-      "start_time": "2023-10-24T16:41:50.834793Z",
-      "end_time": "2023-10-24T16:41:52.419465Z",
+      "parent_run_id": "f0c2e07d-e815-44cc-91a5-2240bd1d091b_0",
+      "start_time": "2023-10-24T18:37:54.938806Z",
+      "end_time": "2023-10-24T18:37:55.705105Z",
       "index": 0,
       "api_calls": [
         {
@@ -131,18 +188,18 @@
           "type": "Tool",
           "inputs": {
             "prompt": "system:\nYou are an AI assistant that extract information from a call transcript . You will be given transcript of a call between an agent and a customer.  You must extract the following from each transcript\t\n    1. Customer Name (key: customer_name)\n    2. List of Complaints (key:complaint)\n    3. Tier (key:tier)\n\n    Field 1 is the name of the customer\n    Field 2 is an array of complaints each complaint is a separate list entry, ignore complaints about call such as long wait times, transfers, and card verification. each list entry must contain the following:\n    description (key: description)\n    is_resolved (key: is_resolved) , 1 if resolved, 0 if unresolved\n    Field 3 is an indicator field, 1 if all complaints were resolved in the call, 0 if complaints were unresolved.\n\n    Please answer in JSON machine-readable format, using the keys from above.  \n    If you are unsure about a value please use \"n/a\". Format the output as JSON object. Make sure that is properly closed at the end.\n\n\nuser:\nHello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling PNC Bank for quality assurance or security purposes. Thank you for calling the PNC Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.\n\nassistant:\n{ \"customer_name\": \"<name_34>\", \"complaint\": [ { \"description\": \"Closing account\", \"is_resolved\": 0 } ], \"tier\": 0 }\n\nuser:\n{{text}}",
-            "deployment_name": "gpt-35-turbo-v0301",
+            "deployment_name": "gpt4",
             "frequency_penalty": 0.0,
             "max_tokens": 500,
             "presence_penalty": 0.0,
             "temperature": 0.0,
-            "text": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling PNC Bank for quality assurance or security purposes. Thank you for calling the PNC Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.",
+            "text": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling ABC Bank for quality assurance or security purposes. Thank you for calling the ABC Bank Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.",
             "top_p": 1.0,
             "stream": true
           },
           "output": [],
-          "start_time": 1698165710.835066,
-          "end_time": 1698165711.585156,
+          "start_time": 1698172674.939103,
+          "end_time": 1698172675.704073,
           "error": null,
           "children": [
             {
@@ -152,7 +209,7 @@
                 "api_base": "https://eu1-mlworkspace-aoai.openai.azure.com/",
                 "api_type": "azure",
                 "api_version": "2023-07-01-preview",
-                "engine": "gpt-35-turbo-v0301",
+                "engine": "gpt4",
                 "messages": [
                   {
                     "role": "system",
@@ -168,7 +225,7 @@
                   },
                   {
                     "role": "user",
-                    "content": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling PNC Bank for quality assurance or security purposes. Thank you for calling the PNC Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching."
+                    "content": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling ABC Bank for quality assurance or security purposes. Thank you for calling the ABC Bank Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching."
                   }
                 ],
                 "temperature": 0.0,
@@ -183,8 +240,8 @@
                 "user": ""
               },
               "output": [],
-              "start_time": 1698165711.34264,
-              "end_time": 1698165711.585072,
+              "start_time": 1698172675.077009,
+              "end_time": 1698172675.704013,
               "error": null,
               "children": null,
               "node_name": null
@@ -201,12 +258,101 @@
         "stderr": ""
       },
       "system_metrics": {
-        "prompt_tokens": 926,
-        "completion_tokens": 0,
-        "total_tokens": 926,
-        "duration": 1.584672
+        "duration": 0.766299
       },
-      "result": "<generator object generate_from_proxy at 0x7f86b709a190>"
+      "result": "<generator object generate_from_proxy at 0x7f87f4f67820>"
+    },
+    {
+      "node": "call_summary",
+      "flow_run_id": "f0c2e07d-e815-44cc-91a5-2240bd1d091b",
+      "run_id": "f0c2e07d-e815-44cc-91a5-2240bd1d091b_call_summary_0",
+      "status": "Completed",
+      "inputs": {
+        "prompt": "system:\nYou are a helpful assistant that provides a short concise summary from the user text.\n\nuser:\n{{question}}\n",
+        "deployment_name": "gpt-35-turbo-v0301",
+        "max_tokens": 500,
+        "question": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling ABC Bank for quality assurance or security purposes. Thank you for calling the ABC Bank Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.",
+        "temperature": 0.0,
+        "stream": true
+      },
+      "output": "<generator object generate_from_proxy at 0x7f87f4f67350>",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "f0c2e07d-e815-44cc-91a5-2240bd1d091b_0",
+      "start_time": "2023-10-24T18:37:54.939310Z",
+      "end_time": "2023-10-24T18:37:55.642261Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "system:\nYou are a helpful assistant that provides a short concise summary from the user text.\n\nuser:\n{{question}}\n",
+            "deployment_name": "gpt-35-turbo-v0301",
+            "max_tokens": 500,
+            "question": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling ABC Bank for quality assurance or security purposes. Thank you for calling the ABC Bank Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.",
+            "temperature": 0.0,
+            "stream": true
+          },
+          "output": [],
+          "start_time": 1698172674.939478,
+          "end_time": 1698172675.309664,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.chat_completion.ChatCompletion.create",
+              "type": "LLM",
+              "inputs": {
+                "api_base": "https://eu1-mlworkspace-aoai.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview",
+                "engine": "gpt-35-turbo-v0301",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a helpful assistant that provides a short concise summary from the user text."
+                  },
+                  {
+                    "role": "user",
+                    "content": "Hello, my name is <name_34>, can I have your first and last name please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right, and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One moment. Okay, permit me one moment. Okay, and I'm just going to go and I would love to assist you. I would just need to transfer you to another department so that they can help you. Is that all right? Okay, so are they going to be the ones to close my account? Because that's what I'm calling up to do today because I'm sorry. I've really had enough. I'm sorry. So they're going to be able to do that with me, right? Close the account for good because I don't want to do anything. Yeah, they will be able to assist you with whatever questions that you might have. Okay, perfect. That's all. Thank you. Okay, one moment. Okay. Thanks for calling ABC Bank for quality assurance or security purposes. Thank you for calling the ABC Bank Fraud Detection and Remediation Team. We are currently experiencing higher than normal call volume. Your current expected wait time is approximately 45 minutes. Please hold for the next available representative. To expedite service, please have your 16 digit account number ready. All representatives are still serving other customers. Please continue to hold and your call will be answered in the order it was received. Thank you for watching.\n"
+                  }
+                ],
+                "temperature": 0.0,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": true,
+                "stop": null,
+                "max_tokens": 500,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "logit_bias": {},
+                "user": ""
+              },
+              "output": [],
+              "start_time": 1698172675.081231,
+              "end_time": 1698172675.309402,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "call_summary"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "prompt_tokens": 346,
+        "completion_tokens": 0,
+        "total_tokens": 346,
+        "duration": 0.702951
+      },
+      "result": "<generator object generate_from_proxy at 0x7f87f4f67350>"
     }
   ]
 }

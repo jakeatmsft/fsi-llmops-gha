@@ -1,3 +1,4 @@
 {
-  "output_prompt": "{ \"customer_name\": \"<name_34>\", \"complaint\": [ { \"description\": \"Closing account\", \"is_resolved\": 0 } ], \"tier\": 0 }"
+  "output_prompt": "{ \"customer_name\": \"<name_35> XXXXX\", \"complaint\": [ { \"description\": \"Closing account\", \"is_resolved\": 0 } ], \"tier\": 0 }",
+  "output_summary": "The user called a bank to close their account due to frustration. They were transferred to the Fraud Detection and Remediation Team and informed of a 45-minute wait time. They were advised to have their account number ready to expedite service."
 }

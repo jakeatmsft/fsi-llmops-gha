@@ -15,21 +15,24 @@ inputs:
       they're going to be able to do that with me, right? Close the account for
       good because I don't want to do anything. Yeah, they will be able to
       assist you with whatever questions that you might have. Okay, perfect.
-      That's all. Thank you. Okay, one moment. Okay. Thanks for calling PNC Bank
-      for quality assurance or security purposes. Thank you for calling the PNC
-      Fraud Detection and Remediation Team. We are currently experiencing higher
-      than normal call volume. Your current expected wait time is approximately
-      45 minutes. Please hold for the next available representative. To expedite
-      service, please have your 16 digit account number ready. All
-      representatives are still serving other customers. Please continue to hold
-      and your call will be answered in the order it was received. Thank you for
-      watching.
+      That's all. Thank you. Okay, one moment. Okay. Thanks for calling ABC Bank
+      for quality assurance or security purposes. Thank you for calling the ABC
+      Bank Fraud Detection and Remediation Team. We are currently experiencing
+      higher than normal call volume. Your current expected wait time is
+      approximately 45 minutes. Please hold for the next available
+      representative. To expedite service, please have your 16 digit account
+      number ready. All representatives are still serving other customers.
+      Please continue to hold and your call will be answered in the order it was
+      received. Thank you for watching.
 outputs:
   output_prompt:
     type: string
     reference: ${callextractprompt.output}
     evaluation_only: false
     is_chat_output: false
+  output_summary:
+    type: string
+    reference: ${call_summary.output}
 nodes:
 - name: callextractprompt
   type: llm
@@ -37,7 +40,7 @@ nodes:
     type: code
     path: LLM_yzja.jinja2
   inputs:
-    deployment_name: gpt-35-turbo-v0301
+    deployment_name: gpt4
     temperature: 0
     top_p: 1
     max_tokens: 500
@@ -50,3 +53,15 @@ nodes:
   module: promptflow.tools.aoai
   aggregation: false
   use_variants: false
+- name: call_summary
+  type: llm
+  source:
+    type: code
+    path: call_summary.jinja2
+  inputs:
+    deployment_name: gpt-35-turbo-v0301
+    temperature: 0
+    question: ${inputs.text}
+    max_tokens: 500
+  connection: aoai-connection
+  api: chat
