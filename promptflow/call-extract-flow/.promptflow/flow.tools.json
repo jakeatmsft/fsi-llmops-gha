@@ -1,0 +1,16 @@
+{
+  "package": {},
+  "code": {
+    "LLM_yzja.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "text": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "LLM_yzja.jinja2"
+    }
+  }
+}

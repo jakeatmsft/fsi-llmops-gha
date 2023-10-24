@@ -1,0 +1,52 @@
+environment:
+  python_requirements_txt: requirements.txt
+inputs:
+  text:
+    type: string
+    is_chat_input: false
+    default: Hello, my name is <name_34>, can I have your first and last name
+      please? First name is X-X-X-X-X-X-X, last name is X-X-X-X-X-X. All right,
+      and how do you pronounce that? <name_35>, last name, XXXXX. Thank you. One
+      moment. Okay, permit me one moment. Okay, and I'm just going to go and I
+      would love to assist you. I would just need to transfer you to another
+      department so that they can help you. Is that all right? Okay, so are they
+      going to be the ones to close my account? Because that's what I'm calling
+      up to do today because I'm sorry. I've really had enough. I'm sorry. So
+      they're going to be able to do that with me, right? Close the account for
+      good because I don't want to do anything. Yeah, they will be able to
+      assist you with whatever questions that you might have. Okay, perfect.
+      That's all. Thank you. Okay, one moment. Okay. Thanks for calling PNC Bank
+      for quality assurance or security purposes. Thank you for calling the PNC
+      Fraud Detection and Remediation Team. We are currently experiencing higher
+      than normal call volume. Your current expected wait time is approximately
+      45 minutes. Please hold for the next available representative. To expedite
+      service, please have your 16 digit account number ready. All
+      representatives are still serving other customers. Please continue to hold
+      and your call will be answered in the order it was received. Thank you for
+      watching.
+outputs:
+  output_prompt:
+    type: string
+    reference: ${callextractprompt.output}
+    evaluation_only: false
+    is_chat_output: false
+nodes:
+- name: callextractprompt
+  type: llm
+  source:
+    type: code
+    path: LLM_yzja.jinja2
+  inputs:
+    deployment_name: gpt-35-turbo-v0301
+    temperature: 0
+    top_p: 1
+    max_tokens: 500
+    presence_penalty: 0
+    frequency_penalty: 0
+    text: ${inputs.text}
+  provider: AzureOpenAI
+  connection: aoai-connection
+  api: chat
+  module: promptflow.tools.aoai
+  aggregation: false
+  use_variants: false
