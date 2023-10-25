@@ -40,7 +40,7 @@ nodes:
     type: code
     path: LLM_yzja.jinja2
   inputs:
-    deployment_name: gpt4
+    deployment_name: gpt-35-turbo-v0301
     temperature: 0
     top_p: 1
     max_tokens: 500

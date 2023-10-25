@@ -3,12 +3,12 @@ flow: .
 data: output.jsonl
 
 # define cloud resource
-runtime: pf-runtime
+runtime: pf_runtime
 
 connections:
   callextractprompt:
     connection: aoai-connection
-    deployment_name: gpt-35-turbo
+    deployment_name: gpt-35-turbo-v0301
   call_summary:
     connection: aoai-connection
-    deployment_name: gpt-35-turbo
+    deployment_name: gpt-35-turbo-v0301

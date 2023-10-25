@@ -1,6 +1,6 @@
 $schema: https://azuremlschemas.azureedge.net/latest/model.schema.json
 name: call-extract-model
-path: ../call-extrct-flow
+path: ../call-extract-flow
 description: register call extract flow folder as a custom model
 properties:
   # In AuzreML studio UI, endpoint detail UI Test tab needs this property to know it's from prompt flow
