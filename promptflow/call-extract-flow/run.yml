@@ -1,6 +1,8 @@
 $schema: https://azuremlschemas.azureedge.net/promptflow/latest/Run.schema.json
 flow: .
 data: output.jsonl
+column_mapping:
+  text: ${data.call_chunk}
 
 # define cloud resource
 runtime: pf_runtime
