@@ -1,0 +1,14 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Run.schema.json
+flow: .
+data: output.jsonl
+
+# define cloud resource
+runtime: pf-runtime
+
+connections:
+  callextractprompt:
+    connection: aoai-connection
+    deployment_name: gpt-35-turbo
+  call_summary:
+    connection: aoai-connection
+    deployment_name: gpt-35-turbo
