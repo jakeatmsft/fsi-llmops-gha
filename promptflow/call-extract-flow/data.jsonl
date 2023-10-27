@@ -1,0 +1,20 @@
+{"line_number":0,"groundtruth_extract":"{ \"customer_name\": \"Michael Emil\", \"complaint\": [ { \"description\": \"Unrecognized recurring charge from CDFBL.com\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":1,"groundtruth_extract":"not authorize these charges. Thank you for providing the necessary information. \n\n{ \"customer_name\": \"Emil Michael\", \"complaint\": [ { \"description\": \"Unauthorized recurring charges from CDFBLL.com\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":2,"groundtruth_extract":"{ \"customer_name\": \"Doris Mow\", \"complaint\": [ { \"description\": \"Dispute for unauthorized transactions\", \"is_resolved\": 0 }, { \"description\": \"Request for information on unclear transaction\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":3,"groundtruth_extract":"{ \"customer_name\": \"n\/a\", \"complaint\": [ { \"description\": \"Dispute for Fandus transactions\", \"is_resolved\": 1 } ], \"tier\": 1 }"}
+{"line_number":4,"groundtruth_extract":"{ \"customer_name\": \"Hirasha\", \"complaint\": [ { \"description\": \"Unauthorized charges on account\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":5,"groundtruth_extract":"{ \"customer_name\": \"Ms. Shamika\", \"complaint\": [ { \"description\": \"Overdrawn checking account\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":6,"groundtruth_extract":"{ \"customer_name\": \"Michael Stone\", \"complaint\": [ { \"description\": \"Unrecognized charges on judging account\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":7,"groundtruth_extract":"{ \"customer_name\": \"Carrie Jones\", \"complaint\": [ { \"description\": \"Fraudulent charges on account\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":8,"groundtruth_extract":"{ \"customer_name\": \"Donna Valerial\", \"complaint\": [ { \"description\": \"Unrecognized transactions on statement\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":9,"groundtruth_extract":"{ \"customer_name\": \"Sarah\", \"complaint\": [ { \"description\": \"Dispute charge for performance app\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":10,"groundtruth_extract":"{ \"customer_name\": \"Edward\", \"complaint\": [ { \"description\": \"Request for phone number for pending transaction on clearme.com\", \"is_resolved\": 1 } ], \"tier\": 1 }"}
+{"line_number":11,"groundtruth_extract":"{ \"customer_name\": \"Robert Potter\", \"complaint\": [ { \"description\": \"Fraudulent charges on account\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":12,"groundtruth_extract":"{ \"customer_name\": \"Brianna\", \"complaint\": [ { \"description\": \"Unauthorized charges from DoorDash\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":13,"groundtruth_extract":"{ \"customer_name\": \"Brian Smith\", \"complaint\": [ { \"description\": \"Unauthorized charge of $54.95 from unknown company\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":14,"groundtruth_extract":"{ \"customer_name\": \"William Gowen\", \"complaint\": [ { \"description\": \"Debit card compromised\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":15,"groundtruth_extract":"{ \"customer_name\": \"Nicole\", \"complaint\": [ { \"description\": \"Fraudulent charges on debit card\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":16,"groundtruth_extract":"{ \"customer_name\": \"n\/a\", \"complaint\": [ { \"description\": \"Not receiving new credit card\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":17,"groundtruth_extract":"{ \"customer_name\": \"James Robert\", \"complaint\": [ { \"description\": \"Unauthorized charges from Apple\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":18,"groundtruth_extract":"{ \"customer_name\": \"Esther Newman\", \"complaint\": [ { \"description\": \"Unauthorized charges on checking accounts\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
+{"line_number":19,"groundtruth_extract":"{ \"customer_name\": \"Sylvia\", \"complaint\": [ { \"description\": \"Unrecognized charges on transaction history\", \"is_resolved\": 0 } ], \"tier\": 0 }"}
