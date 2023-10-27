@@ -8,7 +8,7 @@ def grade(groundtruth: str, prediction: str):
     try:
         groundtruth = json.loads(groundtruth)
         prediction = json.loads(prediction)
-        if len(groundtruth['complaints']) == len(prediction['complaints']):
+        if len(groundtruth['complaint']) == len(prediction['complaint']):
             return "Correct"
         else:
             return "Incorrect"
