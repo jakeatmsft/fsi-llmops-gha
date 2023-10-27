@@ -5,7 +5,7 @@ column_mapping:
   text: ${data.call_chunk}
 
 # define cloud resource
-runtime: pf_runtime
+runtime: automatic
 
 connections:
   callextractprompt:
