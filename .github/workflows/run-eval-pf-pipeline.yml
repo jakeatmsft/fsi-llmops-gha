@@ -34,7 +34,7 @@ jobs:
       run: pip install -r promptflow/call-extract-flow/requirements.txt
     - name: Run promptflow
       run: |
-        pfazure run create -f promptflow/call-extract-flow/run.yml --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} --stream
+        pfazure run create -f promptflow/call-extract-flow/run.yml --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} --stream > promptflow/llmops-helper/run_info.txt
         cat promptflow/llmops-helper/run_info.txt
     - name: Set run name
       run: |
